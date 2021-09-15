@@ -11,7 +11,8 @@ export default function Filter(){
     {id:16,action:"Magic"},{id:22,action:"Romance"},{id:31,action:"Super Power"}];
     const [state,setState] = useState({
       id:1,
-      cont:0
+      cont:0,
+      size: genres.length
     });
     const dispatch = useDispatch();
     const handleClick = (id)=>{
@@ -23,22 +24,20 @@ export default function Filter(){
         setState({
           //concatenamos el state viejo con la propiedad nueva modificada
           ...state,
-          ["cont"]: state.cont + 1,
+          cont: state.cont + 1,
         });
       } else {
         setState({
-          //concatenamos el state viejo con la propiedad nueva modificada
           ...state,
-          ["cont"]: 0,
+          cont: 0,
         });
       }
     };
     const handlePrevious = () => {
       if (state.cont > 0) {
         setState({
-          //concatenamos el state viejo con la propiedad nueva modificada
           ...state,
-          ["cont"]: state.cont - 1,
+          cont: state.cont - 1,
         });
       }
     };
@@ -57,7 +56,14 @@ export default function Filter(){
                 {genres.map((genre,index)=>
                        index>=state.cont? <li className ={state.id=== genre.id ?style.filterActive:null} key={index} onClick={()=>handleClick(genre.id)}>{genre.action}</li>
                     :null
-                    )}
+                    )
+                    }
+                 {state.size-state.cont<5?genres.map((genre,index)=>
+                       index<=4?<li className ={state.id=== genre.id ?style.filterActive:null} key={index} onClick={()=>handleClick(genre.id)}>{genre.action}</li>
+                    :null
+                    ):null
+                    }
+                
             </ul>
             <button
             className={style.button}
