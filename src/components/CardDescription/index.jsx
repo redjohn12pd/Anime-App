@@ -16,13 +16,11 @@ class CardDescription extends React.Component {
   handleNext() {
     if (this.state.cont <= this.props.opening_themes.length - 2) {
       this.setState({
-        //concatenamos el state viejo con la propiedad nueva modificada
         ...this.state,
         cont: this.state.cont + 1,
       });
     } else {
       this.setState({
-        //concatenamos el state viejo con la propiedad nueva modificada
         ...this.state,
         cont: 0,
       });
@@ -31,7 +29,6 @@ class CardDescription extends React.Component {
   handlePrevious() {
     if (this.state.cont > 0) {
       this.setState({
-        //concatenamos el state viejo con la propiedad nueva modificada
         ...this.state,
         cont: this.state.cont - 1,
       });
