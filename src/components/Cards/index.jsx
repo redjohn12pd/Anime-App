@@ -12,24 +12,21 @@ export default function Cards({ title }) {
   const handleNext = () => {
     if (state.cont <= animeResults.results.length - 8) {
       setState({
-        //concatenamos el state viejo con la propiedad nueva modificada
         ...state,
-        ["cont"]: state.cont + 8,
+        cont: state.cont + 8,
       });
     } else {
       setState({
-        //concatenamos el state viejo con la propiedad nueva modificada
         ...state,
-        ["cont"]: 0,
+        cont: 0,
       });
     }
   };
   const handlePrevious = () => {
     if (state.cont > 0) {
       setState({
-        //concatenamos el state viejo con la propiedad nueva modificada
         ...state,
-        ["cont"]: state.cont - 8,
+        cont: state.cont - 8,
       });
     }
   };
