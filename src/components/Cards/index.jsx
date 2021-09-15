@@ -6,11 +6,11 @@ import style from "./index.module.css";
 import Card from "../Card";
 import { ReactComponent as FlechaIzquierda } from "./images/iconmonstr-arrow-24.svg";
 import { ReactComponent as FlechaDerecha } from "./images/iconmonstr-arrow-64.svg";
-export default function Cards({ title }) {
-  const { animeResults, animeTop } = useSelector((state) => state);
-  const [state, setState] = useState({ cont: 0, size: 0 });
+export default function Cards() {
+  const anime = useSelector((state) => state.animeResults);
+  const [state, setState] = useState({ cont: 0});
   const handleNext = () => {
-    if (state.cont <= animeResults.results.length - 8) {
+    if (state.cont <= anime.results.length - 8) {
       setState({
         ...state,
         cont: state.cont + 8,
@@ -33,23 +33,31 @@ export default function Cards({ title }) {
   return (
     <div className={style.row}>
       <button
-        className={`${style.button} ${!animeResults.results && style.hide}`}
+        className={`${style.button} ${!anime.results && style.hide}`}
         onClick={() => handlePrevious()}
       >
         <FlechaDerecha />
       </button>
       <div className={`${style.spaceTop} ${style.container}`}>
-        {animeResults.results &&
-          animeResults.results.map((anime, index) =>
+        {anime.results &&
+          anime.results.map((anime, index) =>
             anime && index >= state.cont ? (
               <Link key={anime.mal_id} to={`/Anime/${anime.mal_id}`}>
                 <Card anime={anime} />
               </Link>
             ) : null
           )}
+        { anime.results && anime.results.length-state.cont <= 8 ?
+          anime.results.map((anime, index) =>
+            anime && index<8 ? (
+              <Link key={anime.mal_id} to={`/Anime/${anime.mal_id}`}>
+                <Card anime={anime} />
+              </Link>
+            ) : null
+          ):null}
       </div>
       <button
-        className={`${style.button} ${!animeResults.results && style.hide}`}
+        className={`${style.button} ${!anime.results && style.hide}`}
         onClick={() => handleNext()}
       >
         <FlechaIzquierda />
