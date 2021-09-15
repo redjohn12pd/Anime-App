@@ -14,7 +14,7 @@ export default function List({title,animes}){
                       <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={`/Anime/${anime.mal_id}`}>
                       <div key={anime.mal_id} className={style.item}>
                         <span>{anime.title}</span>
-                        <span className={style.label}>Anime</span>
+                        <span className={style.label}>{anime.type==="TV"?"ANIME":anime.type}</span>
                       </div>
                     </Link>
                       )

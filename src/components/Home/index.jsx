@@ -23,7 +23,6 @@ export default function Home() {
       <div className={style.animeFilter}>
         {
           animesGenre.results&&animesGenre.results.map(anime=>
-
             <Link to = {`/Anime/${anime.mal_id}`}>
             <Card key={anime.mal_id} anime = {anime}/>
             </Link>
