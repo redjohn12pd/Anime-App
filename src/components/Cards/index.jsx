@@ -4,8 +4,8 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import style from "./index.module.css";
 import Card from "../Card";
-import { ReactComponent as FlechaIzquierda } from "./images/iconmonstr-arrow-24.svg";
-import { ReactComponent as FlechaDerecha } from "./images/iconmonstr-arrow-64.svg";
+import { ReactComponent as RightArrow } from "./images/iconmonstr-arrow-64.svg";
+import { ReactComponent as LeftArrow } from "./images/arrow-right.svg";
 export default function Cards() {
   const anime = useSelector((state) => state.animeResults);
   const [state, setState] = useState({ cont: 0});
@@ -36,7 +36,7 @@ export default function Cards() {
         className={`${style.button} ${!anime.results && style.hide}`}
         onClick={() => handlePrevious()}
       >
-        <FlechaDerecha />
+        <RightArrow />
       </button>
       <div className={`${style.spaceTop} ${style.container}`}>
         {anime.results &&
@@ -60,7 +60,7 @@ export default function Cards() {
         className={`${style.button} ${!anime.results && style.hide}`}
         onClick={() => handleNext()}
       >
-        <FlechaIzquierda />
+        <LeftArrow />
       </button>
     </div>
   );
