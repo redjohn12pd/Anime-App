@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import style from './index.module.css';
-export default function List({title,animes}){
+export default function List({title,animes,action}){
 
     return(
         <div className={style.listContainer}>
@@ -11,7 +11,7 @@ export default function List({title,animes}){
           <ul className ={style.items}>
               {
                   animes&&animes.map(anime=>
-                      <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={`/Anime/${anime.mal_id}`}>
+                        <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={`/Anime/${anime.mal_id}`}>
                       <div key={anime.mal_id} className={style.item}>
                         <span>{anime.title}</span>
                         <span className={style.label}>{anime.type==="TV"?"ANIME":anime.type}</span>

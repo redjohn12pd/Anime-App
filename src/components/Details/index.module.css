@@ -15,10 +15,18 @@
     max-width: 300px;
     max-height:425px;
     padding-top:10px;
+    transform: scale(1);
+    transition: all 1s;
 }
-
+.card:hover{
+    transform: scale(1.1);
+    transition: all 1s;
+}
 .card img{
     max-height: 310px ;
+    min-height: 310px ;
+    max-width: 220px ;
+    min-width: 220px ;
 }
 .status{
     display:flex;

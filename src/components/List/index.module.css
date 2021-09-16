@@ -1,7 +1,7 @@
-.listContainer {
+.listContainer{
   display: inline-block;
-  min-width: 260px;
   min-height: 100%;
+  min-width: 100%;
   background-color: rgba(29, 29, 29, 0.808);
   font-size: 12px;
   color: white;

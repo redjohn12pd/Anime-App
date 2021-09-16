@@ -11,7 +11,9 @@ export default function Favorites() {
   });
   return (
     <div className={style.favorites}>
+      <div className = {style.listFavorites}>
       <List title = "Favorites" animes = {animes} />
+      </div>
       { animes&&animes.map(anime=>
       anime.mal_id===""?
       <CardDescription key={anime.mal_id}
