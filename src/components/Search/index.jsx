@@ -24,11 +24,11 @@ export default function Search(){
         setInput(value);
     };
     return(
-        <div className = {style.search}>
+        <form onSubmit={(e)=>{handleOnClick(e)}} className = {style.search}>
             <input className = {style.input} onChange = {e=>handleOnChange(e.target.value)} value ={input} placeholder ={error===""?"Look your favorite anime...":error}></input>
-           <button disabled = {input === ""?true:false} type ="submit" className={style.button} onClick ={(e)=>{handleOnClick(e)}}>
+           <button disabled = {input === ""?true:false} type ="submit" className={style.button}>
            Search Anime
            </button>
-        </div>
+        </form>
     )
 }

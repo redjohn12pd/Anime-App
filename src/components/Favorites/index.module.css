@@ -1,0 +1,8 @@
+.favorites{
+    display:flex;
+    max-height: 400px;
+    min-height: 400px;
+    min-width: 260px;
+    max-width: 260px;
+    background-color: rgba(209, 7, 7);
+  }

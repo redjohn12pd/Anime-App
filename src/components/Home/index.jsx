@@ -17,7 +17,9 @@ export default function Home() {
     },[]);
   return (
     <div className={style.container}>
+      <div className={style.listAiring}>
       <List title="Animes Airing" animes={animes.results}/>
+      </div>
       <div className = {style.containerFilter}>
       <Filter/>
       <div className={style.animeFilter}>

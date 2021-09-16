@@ -3,14 +3,14 @@ import {useSelector} from "react-redux";
 import { useEffect, useState } from "react";
 import List from "../List";
 import CardDescription from "../CardDescription";
-import { getFavorite } from "../../actions";
+import style from './index.module.css';
 export default function Favorites() {
   const animes = useSelector((state) => state.animeFavorites);
   useEffect(() => {
    
   });
   return (
-    <div>
+    <div className={style.favorites}>
       <List title = "Favorites" animes = {animes} />
       { animes&&animes.map(anime=>
       anime.mal_id===""?
