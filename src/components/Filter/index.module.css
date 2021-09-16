@@ -1,29 +1,33 @@
+.filterDetail{
+    font-size: 25px;
+    margin-bottom: 20px;
+ }
+ 
 .filter{
     display: flex;
     justify-content: left;
     align-items: center;
     list-style: none;
     overflow: hidden;
-    padding: 10px 2px;
-    margin-right: 10px;
+    padding: 10px;
     min-width: 445px;
     min-height: 25px;
-}
-.filterDetail{
-   font-size: 25px;
-   margin-right: 10px;
 }
 .filter li{
     font-size: 16px;
     min-width: 95px;
 }
 .containerFilter{
+    position:fixed;
+    z-index: 100;
+    left:512px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
-    margin-left: 247px;
+    margin-top:10px;
     background-color: rgba(0, 0, 0, 0.801);
+    transform: scale(1.38);
 }
 .button{
     background-color: rgba(197, 13, 166);

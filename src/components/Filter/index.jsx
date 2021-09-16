@@ -58,8 +58,8 @@ export default function Filter(){
                     :null
                     )
                     }
-                 {state.size-state.cont<5?genres.map((genre,index)=>
-                       index<=4?<li className ={state.id=== genre.id ?style.filterActive:null} key={index} onClick={()=>handleClick(genre.id)}>{genre.action}</li>
+                 {state.size-state.cont<8?genres.map((genre,index)=>
+                       index<=6?<li className ={state.id=== genre.id ?style.filterActive:null} key={index} onClick={()=>handleClick(genre.id)}>{genre.action}</li>
                     :null
                     ):null
                     }
