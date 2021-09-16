@@ -7,8 +7,9 @@
 }
 .listAiring{
   position: fixed;
-  top: 80px;
+  top: 90px;
   bottom: 0;
+  margin-left: 10px;
   max-width: 260px;
 }
 .emision {
@@ -82,7 +83,7 @@ text-align: center;
   padding-left: 30px;
   margin-left: 280px;
   width: 76.5%;
-  max-height: 540px;
+  max-height: 560px;
   text-align: center;
   overflow: hidden;
   overflow-y: scroll;

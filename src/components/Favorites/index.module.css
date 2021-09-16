@@ -1,9 +1,10 @@
 .favorites{
-
+ margin-top: 100px;
   }
   .listFavorites{
     max-width: 400px;
+    
   }
   .listFavorites span{
-    font-size: 20px;
+    font-size: 15px;
   }
