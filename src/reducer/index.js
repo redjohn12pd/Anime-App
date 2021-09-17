@@ -30,8 +30,8 @@ export default function reducer(state = initialState, { type, payload }) {
        return state;
      }
     case REMOVE_ANIME_FAVORITE:
-        return{...state, animeFavorites:state.animeFavorites.map( anime=>{
-          if(anime.mal_id === payload.mal_id){
+        return{...state, animeFavorites:state.animeFavorites.filter( anime=>{
+          if(anime.mal_id !== payload.mal_id){
              anime.isfavorite=false;
           }
         })}

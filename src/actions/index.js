@@ -24,6 +24,12 @@ export function getFavorite(payload){
         payload
     }
 }
+export function removeFavorite(payload){
+    return{
+        type: REMOVE_ANIME_FAVORITE,
+        payload
+    }
+}
 export function getAnimesAiring(payload){
     return function(dispatch){
         return fetch(`https://api.jikan.moe/v3/search/anime?status=airing&order_by=score`)
