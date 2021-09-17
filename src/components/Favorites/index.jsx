@@ -2,7 +2,6 @@ import React from "react";
 import {useSelector} from "react-redux";
 import { useEffect, useState } from "react";
 import List from "../List";
-import CardDescription from "../CardDescription";
 import style from './index.module.css';
 export default function Favorites() {
   const animes = useSelector((state) => state.animeFavorites);
