@@ -2,9 +2,9 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getAnime, getFavorite } from "../../actions";
+import { getAnime} from "../../actions";
 import style from "./index.module.css";
-import { ReactComponent as IconTv } from "./img/icontv.svg";
+import CardCover from "../CardCover";
 import CardDescription from "../CardDescription";
 export default function Details() {
   const { id } = useParams();
@@ -13,9 +13,6 @@ export default function Details() {
     dispatch(getAnime(id));
   },[]);
   const anime = useSelector((state) => state.anime);
-  const handleFavorite = ()=> {
-    dispatch(getFavorite(anime));
-  }
   return (
     <div className={style.row}>
       <CardDescription
@@ -59,17 +56,7 @@ export default function Details() {
           <p>{anime.synopsis}</p>
         </div>
       </div>
-      <div className={style.card}>
-        <img src={anime.image_url} alt="Image not found"></img>
-        <div className={style.status}>
-          <IconTv />
-          <span>{anime.status}</span>
-        </div>
-        <div className={style.options}>
-          <button onClick={()=>handleFavorite()}>Add Favorites</button>
-          <button>Follow Anime</button>
-        </div>
-      </div>
+      <CardCover img_url = {anime.image_url} status = {anime.status} id = {id}/>
     </div>
   );
 }
