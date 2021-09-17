@@ -7,6 +7,7 @@ import Card from '../Card';
 import Filter from '../Filter';
 import style from "./index.module.css";
 import List from "../List";
+import Slider from '../Slider';
 export default function Home() {
     const animes = useSelector((state) => state.animeAiring);
     const animesGenre = useSelector((state) => state.animeGenre);
@@ -20,17 +21,9 @@ export default function Home() {
       <div className={style.listAiring}>
       <List title="Animes Airing" animes={animes.results}/>
       </div>
-      <div className = {style.containerFilter}>
+      <div className = {`${style.containerFilter} ${!animesGenre.results&&style.hide}`}>
       <Filter/>
-      <div className={style.animeFilter}>
-        {
-          animesGenre.results&&animesGenre.results.map(anime=>
-            <Link to = {`/Anime/${anime.mal_id}`}>
-            <Card key={anime.mal_id} anime = {anime}/>
-            </Link>
-            )
-        }
-      </div>
+        <Slider anime = {animesGenre.results}/>
       </div>
     </div>
   );
