@@ -22,7 +22,7 @@
   scroll-behavior: smooth;
   list-style: none;
   padding-top: 20px;
-  max-height: 470px;
+  max-height: 465px;
 }
 .item {
   display: flex;
