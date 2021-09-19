@@ -30,11 +30,8 @@ export default function reducer(state = initialState, { type, payload }) {
        return state;
      }
     case REMOVE_ANIME_FAVORITE:
-        return{...state, animeFavorites:state.animeFavorites.filter( anime=>{
-          if(anime.mal_id !== payload.mal_id){
-             anime.isfavorite=false;
-          }
-        })}
+        return{...state, animeFavorites:state.animeFavorites.filter( anime=>anime.mal_id !== payload.mal_id
+        )}
     case GET_ANIMES_AIRING:
       return { ...state, animeAiring: payload };
     case GET_ANIME_GENRE:
