@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className={style.container}>
       <div className={`${style.listAiring} ${!animesGenre.results&&style.hide}`}>
-      <List title="Animes Airing" animes={animes.results}/>
+      <List title="Animes Airing" animes={animes.results} action = {true}/>
       </div>
       <div className = {`${style.containerFilter} ${!animesGenre.results&&style.hide}`}>
       <Filter/>

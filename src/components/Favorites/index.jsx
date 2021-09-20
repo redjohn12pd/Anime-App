@@ -12,7 +12,7 @@ export default function Favorites() {
   return (
     <div className={style.favorites}>
       <div className = {style.listFavorites}>
-      <List title = "Favorites" animes = {animes} />
+      <List title = "Favorites" animes = {animes} action = {false} />
       </div>
       <CardCover/>
     </div>

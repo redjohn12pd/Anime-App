@@ -11,12 +11,17 @@ export default function List({title,animes,action}){
           <ul className ={style.items}>
               {
                   animes&&animes.map(anime=>
+                    action?
                         <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={`/Anime/${anime.mal_id}`}>
                       <div key={anime.mal_id} className={style.item}>
                         <span>{anime.title}</span>
                         <span className={style.label}>{anime.type==="TV"?"ANIME":anime.type}</span>
                       </div>
-                    </Link>
+                    </Link>:
+                    <div key={anime.mal_id} className={style.item}>
+                    <span>{anime.title}</span>
+                    <span className={style.label}>{anime.type==="TV"?"ANIME":anime.type}</span>
+                  </div>
                       )
               }
           </ul>
