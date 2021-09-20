@@ -13,11 +13,7 @@ export default function CardCover({img_url, status}){
   const {anime, animeFavorites}= useSelector((state) => state);
   const handleFavorite = ()=> {
         if(button==="Add To Favorites")
-<<<<<<< HEAD
         {dispatch(getFavorite(anime));
-=======
-       { dispatch(getFavorite(anime));
->>>>>>> f727020d3de912392ea61c007e76b81cec975297
         setButton("Delete To Favorites");}
         else{
         dispatch(removeFavorite(anime));
