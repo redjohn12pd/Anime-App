@@ -1,8 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import style from './index.module.css';
-export default function List({title,animes,action}){
-
+import {getAnime} from '../../actions';
+import { connect } from 'react-redux';
+function List({title,animes,action,getAnime}){
+ const handleOnClick = (id)=>{
+   getAnime(id)
+ }
     return(
         <div className={style.listContainer}>
           <div className={style.listTitle}>
@@ -18,13 +22,19 @@ export default function List({title,animes,action}){
                         <span className={style.label}>{anime.type==="TV"?"ANIME":anime.type}</span>
                       </div>
                     </Link>:
-                    <div key={anime.mal_id} className={style.item}>
+                    <button key={anime.mal_id} className={style.item} onClick={()=>{handleOnClick(anime.mal_id)}}>
                     <span>{anime.title}</span>
                     <span className={style.label}>{anime.type==="TV"?"ANIME":anime.type}</span>
-                  </div>
+                  </button>
                       )
               }
           </ul>
         </div>
     );
 }
+function mapDispatchToProps(dispatch){
+    return{
+      getAnime: id=>dispatch(getAnime(id))
+    }
+}
+export default connect(null,mapDispatchToProps)(List);

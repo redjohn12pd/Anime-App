@@ -2,7 +2,7 @@ import {
   GET_ANIMES,
   GET_ANIMES_AIRING,
   GET_ANIME,
-  GET_ANIME_FAVORITE,
+  ADD_ANIME_FAVORITE,
   REMOVE_ANIME_FAVORITE,
   GET_ANIME_GENRE,
 } from "../actions";
@@ -22,7 +22,7 @@ export default function reducer(state = initialState, { type, payload }) {
     case GET_ANIME:
       payload.isfavorite=false;
       return { ...state, anime: payload };
-    case GET_ANIME_FAVORITE:
+    case ADD_ANIME_FAVORITE:
      if(state.animeFavorites.filter(fav=>fav.mal_id===payload.mal_id).length===0){
       payload.isfavorite=true;
       return { ...state, animeFavorites: state.animeFavorites.concat([payload])}

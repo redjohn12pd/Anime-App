@@ -3,11 +3,14 @@
   display: flex;
   justify-content: space-between;
   width: 60%;
-  margin-top: 100px;
+  margin-top: 120px;
   }
   .listFavorites{
-    max-width: 400px;
+    min-width: 400px;
   }
   .listFavorites span{
     font-size: 15px;
+  }
+  .hide{
+    display:none;
   }

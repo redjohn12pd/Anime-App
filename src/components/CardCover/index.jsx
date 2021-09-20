@@ -1,7 +1,7 @@
 import React from "react";
 import {useState,useEffect} from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import {getFavorite, removeFavorite } from "../../actions";
+import {addFavorite, removeFavorite } from "../../actions";
 import style from "./index.module.css";
 import { ReactComponent as IconTv } from "./img/icontv.svg";
 export default function CardCover({img_url, status}){
@@ -13,7 +13,7 @@ export default function CardCover({img_url, status}){
   const {anime, animeFavorites}= useSelector((state) => state);
   const handleFavorite = ()=> {
         if(button==="Add To Favorites")
-        {dispatch(getFavorite(anime));
+        {dispatch(addFavorite(anime));
         setButton("Delete To Favorites");}
         else{
         dispatch(removeFavorite(anime));
