@@ -15,7 +15,7 @@ export default function Favorites() {
       <div className = {style.listFavorites}>
       <List title = "Favorites" animes = {animeFavorites} action = {false} />
       </div>
-      <CardCover img_url = {anime.image_url} status = {anime.status}/>
+      <CardCover mal_id = {anime.mal_id} img_url = {anime.image_url} status = {anime.status}/>
     </div>
   );
 }
