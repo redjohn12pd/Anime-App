@@ -1,5 +1,7 @@
 import React from 'react';
 import style from './index.module.css';
+import logoGit from './img/git.png';
+import logoIn from './img/in.png';
 export default function About(){
 
     return(
@@ -11,10 +13,8 @@ export default function About(){
                 <h2 className ={style.titleCover}>PD DEVELOPMENT</h2>
             </div>
             <div className ={style.iconsCover}>
-                <div className ={style.icon}><img src="https://www.flaticon.es/svg/static/icons/svg/174/174848.svg " alt=" "/></div>
-                <div className ={style.icon}><img src="https://www.flaticon.es/svg/static/icons/svg/174/174855.svg " alt=" "/></div>
-                <div className ={style.icon}><img src="https://www.flaticon.es/svg/static/icons/svg/174/174883.svg " alt=" "/></div>
-                <div className ={style.icon}><img src="https://www.flaticon.es/svg/static/icons/svg/174/174879.svg " alt=" "/></div>
+                <div className ={style.icon}><img src={logoIn} alt="LinkedIn"/></div>
+                <div className ={style.icon}><img src={logoGit} alt="GitHub"/></div>
             </div>
         </div>
     );
