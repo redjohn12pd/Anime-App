@@ -1,0 +1,46 @@
+.cover {
+    position: relative;
+    height: 660px;
+    width: 100%;
+    background-image: url("./img/banner.jpg");
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.textCover {
+    padding-top: 220px;
+    font-size: 60px;
+}
+
+.titleCover {
+    color: white;
+    text-align: center;
+}
+
+.iconsCover {
+    text-align: center;
+}
+
+.icon {
+    margin: 15px;
+    display: inline-block;
+    transform: scale(1);
+    transition: all 1s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    transition: all 1s;
+}
+
+.icon img {
+    height: 30px;
+}

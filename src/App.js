@@ -6,6 +6,7 @@ import Nav from './components/Nav';
 import Details from './components/Details';
 import Favorites from './components/Favorites';
 import Home from './components/Home';
+import About from './components/About';
 function App() {
   return (
 <React.Fragment>
@@ -22,6 +23,9 @@ function App() {
 </Route>
 <Route exact path="/Favorites">
   <Favorites/>
+</Route>
+<Route exact path="/About">
+  <About/>
 </Route>
 </Switch>
 </React.Fragment>
