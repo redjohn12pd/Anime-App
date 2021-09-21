@@ -1,29 +1,39 @@
 import React from "react";
 import {useState,useEffect} from 'react';
+import { useLocation } from 'react-router-dom'
 import { useSelector, useDispatch } from "react-redux";
 import {addFavorite, removeFavorite } from "../../actions";
 import style from "./index.module.css";
 import { ReactComponent as IconTv } from "./img/icontv.svg";
 export default function CardCover({img_url, status}){
-  const [button, setButton] = useState("");
+  const [button, setButton] = useState({fav:"",foll:"lol"});
   const dispatch = useDispatch();
   const isFavorite = ()=>{
         return animeFavorites.filter(fav=>fav.mal_id===anime.mal_id).length===1;
   }
   const {anime, animeFavorites}= useSelector((state) => state);
+  const location = useLocation();
   const handleFavorite = ()=> {
-        if(button==="Add To Favorites")
+        if(button.fav==="Add To Favorites")
         {dispatch(addFavorite(anime));
-        setButton("Delete To Favorites");}
+        setButton({button,fav:"Delete To Favorites"});}
         else{
         dispatch(removeFavorite(anime));
-        setButton("Add To Favorites");}
+        setButton({button,fav:"Add To Favorites"});}
+  }
+  const handleFollow = ()=>{
+
   }
   useEffect(()=>{
-    if(isFavorite()){
-      setButton("Delete To Favorites");
+    if(location.pathname === "/Favorites"){
+      setButton({button,foll:"Go To Anime"});
     }else{
-      setButton("Add To Favorites");
+      setButton({button,foll:"Follow Anime"});
+    }
+    if(isFavorite()){
+      setButton({button,fav:"Delete To Favorites"});
+    }else{
+      setButton({button,fav:"Add To Favorites"});
     }
   })
     return(
@@ -35,7 +45,7 @@ export default function CardCover({img_url, status}){
         </div>
         <div className={style.options}>
           <button onClick={()=>handleFavorite()}>{isFavorite()? "Delete To Favorites":"Add To Favorites"}</button>
-          <button>Follow Anime</button>
+          <button>{location.pathname === "/Favorites"?"Go To Anime":"Follow Anime"}</button>
         </div>
       </div>
     );
