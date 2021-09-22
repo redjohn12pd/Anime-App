@@ -4,8 +4,8 @@
 }
 .card {
     margin: .7rem;
-    max-width: 30%;
-    min-width: 30%;
+    max-width: 50%;
+    min-width: 50%;
     background-color: white;
     border-radius: 0.25rem;
     color:black;
@@ -15,7 +15,7 @@ card:hover{
 }
 
 .headerCard {
-    padding: 0.75rem 0;
+    padding: 1rem 0.3rem;
     margin-bottom: 0;
     background-color: rgba(0, 0, 0, 0.03);
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);

@@ -20,10 +20,13 @@ export default function About(){
                 <a target="_blank" href={"https://github.com/DanielSerenoPD"}><div className ={style.icon}><img src={logoGit} alt="GitHub"/></div></a>
             </div>
     </div>
-    <div className = {style.cards}>
-    <CardLonger data = {henry}/>
-    <CardLonger data = {uveg}/>
+    <h3 className ={`${style.sectionTitle} ${style.mt}`}>My Education</h3>
+    <div className = {style.row}>
     <CardLonger data = {itz}/>
+    <CardLonger data = {uveg}/>
+    </div>
+    <div className = {style.row}>
+    <CardLonger data = {henry}/>
     </div>
     </div>
     );
