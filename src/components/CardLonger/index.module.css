@@ -1,0 +1,30 @@
+.cards{
+    display:flex;
+    width:80%;
+    margin: auto;
+}
+.card {
+    margin: .7rem;
+    background-color: white;
+    border-radius: 0.25rem;
+    color:black;
+}
+
+.headerCard {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.bodyCard {
+    padding: 1.25rem;
+}
+
+.cardBlue {
+    border: 1px solid rgba(8, 11, 168, 0.6);
+}
+
+.cardPurple {
+    border: 1px solid rgba(100, 17, 82, 0.6);
+}
