@@ -16,8 +16,8 @@ function List({title,animes,action,getAnime}){
               {
                   animes&&animes.map(anime=>
                     action?
-                        <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to={`/Anime/${anime.mal_id}`}>
-                      <div key={anime.mal_id} className={style.item}>
+                        <Link key={anime.mal_id} style={{ color: 'inherit', textDecoration: 'inherit'}} to={`/Anime/${anime.mal_id}`}>
+                      <div className={style.item}>
                         <span>{anime.title}</span>
                         <span className={style.label}>{anime.type==="TV"?"ANIME":anime.type}</span>
                       </div>

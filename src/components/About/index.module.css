@@ -1,6 +1,14 @@
+.container{
+
+}
+.cards{
+    width:80%;
+    margin-top: 1500px;
+    margin: auto;
+}
 .cover {
     position: relative;
-    height: 660px;
+    
     width: 100%;
     background-image: url("./img/banner.jpg");
     background-size: cover;
@@ -8,7 +16,7 @@
 
 .overlay {
     position: absolute;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(90, 83, 83, 0.5);
     top: 0;
     bottom: 0;
     right: 0;
@@ -17,7 +25,7 @@
 
 .textCover {
     padding-top: 220px;
-    font-size: 55px;
+    font-size: 45px;
 }
 
 .titleCover {
@@ -43,4 +51,29 @@
 
 .icon img {
     height: 60px;
+}
+
+.card {
+    margin: .7rem;
+    background-color: white;
+    border-radius: 0.25rem;
+}
+
+.headerCard {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.bodyCard {
+    padding: 1.25rem;
+}
+
+.cardBlue {
+    border: 1px solid rgba(8, 11, 168, 0.6);
+}
+
+.cardPurple {
+    border: 1px solid rgba(100, 17, 82, 0.6);
 }

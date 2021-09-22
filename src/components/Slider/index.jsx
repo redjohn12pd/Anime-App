@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Card from "../Card";
 import { ReactComponent as RightArrow } from "./img/iconmonstr-arrow-64.svg";

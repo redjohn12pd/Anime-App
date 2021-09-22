@@ -8,9 +8,6 @@ import { ReactComponent as IconTv } from "./img/icontv.svg";
 export default function CardCover({mal_id, img_url, status}){
   const [button, setButton] = useState({fav:"Add To Favorites",foll:"lol"});
   const dispatch = useDispatch();
-  const isFavorite = ()=>{
-        return animeFavorites.filter(fav=>fav.mal_id===anime.mal_id).length===1;
-  }
   const {anime, animeFavorites}= useSelector((state) => state);
   const location = useLocation();
   const history = useHistory();
@@ -28,13 +25,17 @@ export default function CardCover({mal_id, img_url, status}){
       }
   }
   useEffect(()=>{
+    const isFavorite = ()=>{
+    return animeFavorites.filter(fav=>fav.mal_id===mal_id).length===1;
+}
     if(isFavorite()){
       setButton({button,fav:"Delete To Favorites"});
     }
-  },[])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[button.fav,button.foll])
     return(
         <div className={style.card}>
-        <img src={img_url} alt="Image not found"></img>
+        <img src={img_url} alt="not found"></img>
         <div className={style.status}>
           <IconTv />
           <span>{status}</span>

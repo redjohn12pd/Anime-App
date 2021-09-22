@@ -2,8 +2,6 @@ import React from "react";
 import {useEffect} from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import {getAnimesAiring, getAnimesGenre} from '../../actions';
-import {Link} from 'react-router-dom';
-import Card from '../Card';
 import Filter from '../Filter';
 import style from "./index.module.css";
 import List from "../List";
