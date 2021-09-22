@@ -3,7 +3,7 @@ import style from './index.module.css';
 import logoGit from './img/git.png';
 import logoIn from './img/in.png';
 import CardLonger from '../CardLonger';
-import {uveg, itz, henry} from './Data.jsx';
+import {uveg, itz, henry, person} from './Data.jsx';
 export default function About(){
     
     return(
@@ -20,13 +20,17 @@ export default function About(){
                 <a target="_blank" href={"https://github.com/DanielSerenoPD"}><div className ={style.icon}><img src={logoGit} alt="GitHub"/></div></a>
             </div>
     </div>
+    <h3 className ={`${style.sectionTitle} ${style.mt}`}>Who Am I?</h3>
+    <div className = {style.row}>
+    <CardLonger data = {person}/>
+    </div>
     <h3 className ={`${style.sectionTitle} ${style.mt}`}>My Education</h3>
     <div className = {style.row}>
-    <CardLonger data = {itz}/>
-    <CardLonger data = {uveg}/>
+    <CardLonger data = {itz} state ={true}/>
+    <CardLonger data = {uveg} state ={true}/>
     </div>
     <div className = {style.row}>
-    <CardLonger data = {henry}/>
+    <CardLonger data = {henry} state ={true}/>
     </div>
     </div>
     );

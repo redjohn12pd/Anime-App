@@ -4,8 +4,6 @@
 }
 .card {
     margin: .7rem;
-    max-width: 50%;
-    min-width: 50%;
     background-color: white;
     border-radius: 0.25rem;
     color:black;
@@ -42,6 +40,9 @@ card:hover{
 .textDanger {
     color: #dc3545;
 }
+.textSuccess {
+    color: #0caa21;
+}
 p{
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
     font-size: 15px;
@@ -50,4 +51,8 @@ p{
     background-color: #20c997;
     border-radius: 4px;
     padding: 8px;
+}
+.state{
+    max-width: 50%;
+    min-width: 50%;
 }

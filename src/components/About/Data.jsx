@@ -30,3 +30,14 @@ export const udemy = {
     "Estoy muy feliz con lo aprendido aqui, gracias a henry pude descubrir que mi pasión es el desarrollo web",
     color: "black"
 }
+export const person = {
+    header:"Un poco sobre mi",
+    title:"Mi nombre es Daniel Marin Sereno",
+    subtitle: "Programador",
+    description: "Desde que tenia 15 años me interese por la programación, pero fue hasta finales "+
+    "de la preparatoria donde comence a sumergirme mas a fondo en este mundo tan hermoso "+
+    "lleno de lineas de codigo! Basicamente llevo mas de 3 años aprendiendo a programar, "+
+    "desde que entre a la universidad aprendi a programar con Java, digamos que es mi lengua nativa XD, un tiempo estuve codeando "+
+    "en Python, Django y Flask, aprendiendo de manera autodidacta. Actualmente me estoy enfocando en el desarrollo web con React, Redux, JavaScript, Html 5, Css3, son mi pan de cada dia.",
+    color: "green"
+}
