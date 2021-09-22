@@ -1,17 +1,21 @@
-.cards{
-    display:flex;
-    width:80%;
-    margin: auto;
+*{
+    padding: 0;
+    margin: 0;
 }
 .card {
     margin: .7rem;
+    max-width: 30%;
+    min-width: 30%;
     background-color: white;
     border-radius: 0.25rem;
     color:black;
 }
+card:hover{
+
+}
 
 .headerCard {
-    padding: 0.75rem 1.25rem;
+    padding: 0.75rem 0;
     margin-bottom: 0;
     background-color: rgba(0, 0, 0, 0.03);
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
@@ -27,4 +31,23 @@
 
 .cardPurple {
     border: 1px solid rgba(100, 17, 82, 0.6);
+}
+
+  /*HELPERS*/
+    
+.cardTitle {
+    margin-bottom: 0.75rem;
+}
+
+.textDanger {
+    color: #dc3545;
+}
+p{
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 15px;
+}
+.bgGreen {
+    background-color: #20c997;
+    border-radius: 4px;
+    padding: 8px;
 }

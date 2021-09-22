@@ -1,6 +1,11 @@
 .container{
 
 }
+.cards{
+   display:flex;
+   width: 80%;
+   margin:auto;
+}
 .cover {
     position: relative;
     height: 660px;
