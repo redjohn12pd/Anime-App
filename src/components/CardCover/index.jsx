@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {addFavorite, removeFavorite } from "../../actions";
 import style from "./index.module.css";
 import { ReactComponent as IconTv } from "./img/icontv.svg";
-export default function CardCover({mal_id, img_url, status}){
+export default function CardCover(){
   const [button, setButton] = useState({fav:"Add To Favorites",foll:""});
   const dispatch = useDispatch();
   const {anime, animeFavorites}= useSelector((state) => state);
@@ -21,7 +21,7 @@ export default function CardCover({mal_id, img_url, status}){
   }
   const handleSecondBtn = ()=>{
       if(location.pathname === "/Favorites"){
-        history.push(`/Anime/${mal_id}`);
+        history.push(`/Anime/${anime.mal_id}`);
       }
   }
   useEffect(()=>{
@@ -35,10 +35,10 @@ export default function CardCover({mal_id, img_url, status}){
   },[button.fav,button.foll])
     return(
         <div className={style.card}>
-        <img src={img_url} alt="not found"></img>
+        <img src={anime.image_url} alt="not found"></img>
         <div className={style.status}>
           <IconTv />
-          <span>{status}</span>
+          <span>{anime.status}</span>
         </div>
         <div className={style.options}>
           <button onClick={()=>handleFavorite()}>{button.fav}</button>
