@@ -1,25 +1,27 @@
 .container{
-background-color: white;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    max-height: 657px;
 }
 .row{
-    display: flex;
-    justify-content: center;
+   display: flex;
+   justify-content: center;
    width: 80%;
    margin:auto;
    padding-top:10px;
+   padding-bottom:10px;
    margin-top: 10px;
 }
 .cover {
     position: relative;
-    height: 660px;
+    height: 460px;
     width: 100%;
-    background-image: url("./img/banner.jpg");
     background-size: cover;
 }
 
 .overlay {
     position: absolute;
-    background: rgba(90, 83, 83, 0.5);
+    background: rgba(0, 0, 0, 0.562);
     top: 0;
     bottom: 0;
     right: 0;
@@ -27,7 +29,7 @@ background-color: white;
 }
 
 .textCover {
-    padding-top: 220px;
+    padding-top: 120px;
     font-size: 45px;
 }
 
@@ -56,12 +58,12 @@ background-color: white;
     height: 60px;
 }
 .sectionTitle{
-    color:black;
+    color:rgb(255, 255, 255);
     text-align: center;
-    font-size:60px;
+    font-size:40px;
 }
 .mt{
- margin-top: 120px;
+ margin-top: 60px;
 }
 .textTitle{
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
@@ -71,6 +73,6 @@ background-color: white;
 .text{
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
     font-size: 15px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
