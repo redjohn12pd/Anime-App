@@ -6,7 +6,7 @@ import {addFavorite, removeFavorite } from "../../actions";
 import style from "./index.module.css";
 import { ReactComponent as IconTv } from "./img/icontv.svg";
 export default function CardCover(){
-  const [button, setButton] = useState({fav:"Add To Favorites",foll:""});
+  const [button, setButton] = useState({cont:0,fav:"Add To Favorites",foll:""});
   const dispatch = useDispatch();
   const {anime, animeFavorites}= useSelector((state) => state);
   const location = useLocation();
@@ -17,7 +17,8 @@ export default function CardCover(){
         setButton({...button,fav:"Delete To Favorites"});}
         else{
         dispatch(removeFavorite(anime));
-        setButton({...button,fav:"Add To Favorites"});}
+        setButton({...button,fav:"Add To Favorites"})
+       ;}
   }
   const handleSecondBtn = ()=>{
       if(location.pathname === "/Favorites"){
@@ -26,13 +27,15 @@ export default function CardCover(){
   }
   useEffect(()=>{
     const isFavorite = ()=>{
-    return animeFavorites.filter(fav=>fav.mal_id===anime.mal_id).length===1;
-}
+      return animeFavorites.filter(fav=>fav.mal_id===anime.mal_id).length===1;
+  }
     if(isFavorite()){
-      setButton({...button,fav:"Delete To Favorites"});
+      setButton({...button ,fav:"Delete To Favorites"});
+    }else{
+      setButton({...button ,fav:"Add To Favorites"});
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[button.fav,button.foll])
+  },[animeFavorites,button.fav,anime.mal_id])
     return(
         <div className={style.card}>
         <img src={anime.image_url} alt="not found"></img>

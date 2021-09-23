@@ -9,10 +9,13 @@ import CardDescription from "../CardDescription";
 export default function Details() {
   const { id } = useParams();
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getAnime(id));
-  },[]);
-  const anime = useSelector((state) => state.anime);
+  const {animeFavorites, anime} = useSelector((state) => state);
+  const isFavorite = ()=>{
+    return animeFavorites.filter(fav=>fav.mal_id===anime.mal_id).length===1;
+}
+useEffect(() => {
+  dispatch(getAnime(id));
+},[dispatch,id]);
   return (
     <div className={style.row}>
       <CardDescription
@@ -56,7 +59,7 @@ export default function Details() {
           <p>{anime.synopsis}</p>
         </div>
       </div>
-      <CardCover img_url = {anime.image_url} status = {anime.status} id = {id}/>
+      <CardCover/>
     </div>
   );
 }
