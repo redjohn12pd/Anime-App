@@ -1,0 +1,36 @@
+.row{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    max-height: 200px;
+    width: 80%;
+}
+.footer{
+    display: flex;
+    justify-content:center;
+    height: 300px;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.849);
+
+}
+.itemsFooter{
+    display: flex;
+    width: 60%;
+    font-size: 17px;
+    justify-content: space-between;
+    list-style: none;
+    color: rgba(255, 255, 255, 0.562);
+}
+
+.titleFooter{
+    font-size: 30px;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.562);
+}
+.subTitleFooter{
+    font-size: 20px;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.562);
+}

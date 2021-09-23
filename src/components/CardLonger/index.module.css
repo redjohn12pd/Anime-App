@@ -3,13 +3,18 @@
     margin: 0;
 }
 .card {
+    max-height: 250px;
+    min-height: 250px;
     margin: .7rem;
     background-color: white;
     border-radius: 0.25rem;
     color:black;
+    transform: scale(.9);
+    transition: all 1s;
 }
-card:hover{
-
+.card:hover{
+    transform: scale(1);
+    transition: all 1s;
 }
 
 .headerCard {

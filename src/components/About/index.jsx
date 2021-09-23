@@ -4,6 +4,7 @@ import logoGit from './img/git.png';
 import logoIn from './img/in.png';
 import CardLonger from '../CardLonger';
 import {uveg, itz, henry, person} from './Data.jsx';
+import Footer from '../Footer';
 export default function About(){
     
     return(
@@ -32,6 +33,7 @@ export default function About(){
     <div className = {style.row}>
     <CardLonger data = {henry} state ={true}/>
     </div>
+    <Footer/>
     </div>
     );
 }
