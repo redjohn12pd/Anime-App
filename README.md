@@ -1,4 +1,5 @@
 Anime-App
+
 Es una SPA que permite buscar informacion de tu anime favorito, podras visualizar el trailer, si esta en emision,
 cuenta un con una barra para filtrar por tu genero favorito. Date un vuelta clickeando en el link de abajo, si eres
 fanatico del anime como yo, quedaras fascinado!❤️
