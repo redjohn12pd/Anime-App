@@ -12,10 +12,13 @@ date una vuelta por la sección About Me, en ese apartado escribi un poco sobre 
 https://615bb41c6f11d8715c445791--confident-visvesvaraya-e8a6db.netlify.app/
 
 Este es mi primer proyecto combinando las tecnologias React, Redux y espero sea de su agrado!🎁
-Stack de tecnologias:
-React
-Redux
-Javascript
-Html5
-Css
+
+<h3 style = "text-align:center">Stack de tecnologias:</h3>
+<ul style = "list-style: none">
+<li>React</li>
+<li>Redux</li>
+<li>Javascript</li>
+<li>Html5</li>
+<li>Css</li>
+</ul>
 ⌨️ con ❤️ por DanielSerenoPD 😊
