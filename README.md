@@ -11,6 +11,6 @@ date una vuelta por la sección About Me, en ese apartado escribi un poco sobre 
 
 https://615bb41c6f11d8715c445791--confident-visvesvaraya-e8a6db.netlify.app/
 
-Este es mi primer proyecto en React, espero sea de su agrado!🎁
+Este es mi primer proyecto combinando las tecnologias React, Redux y espero sea de su agrado!🎁
 
 ⌨️ con ❤️ por DanielSerenoPD 😊
