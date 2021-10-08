@@ -4,7 +4,7 @@ Es una SPA que permite buscar informacion de tu anime favorito, podras visualiza
 cuenta un con una barra para filtrar por tu genero favorito. Date un vuelta clickeando en el link de abajo, si eres
 fanatico del anime como yo, quedaras fascinado!❤️
 
-Comenzando 🚀
+<h3>Comenzando 🚀</h3>
 
 Click en el siguiente enlace para interactuar con la aplicación! Y aprovechando que estas en la app,
 date una vuelta por la sección About Me, en ese apartado escribi un poco sobre mi.❤️
